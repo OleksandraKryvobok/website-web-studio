@@ -20,12 +20,17 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  height: 581px;
-  width: 528px;
+  width: 450px;
+  height: 609px;
+
   padding: 40px;
 
   background-color: #ffffff;
   border-radius: 4px;
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal__button {
@@ -154,11 +159,15 @@
   }
 
   &::placeholder {
-    font-size: 12px;
-    line-height: 1.17;
+    font-style: 14px;
+    line-height: 1.14;
     letter-spacing: 0.01em;
 
     color: rgba(117, 117, 117, 0.5);
+    @media screen and (min-width: 1200px) {
+      font-size: 12px;
+      line-height: 1.17;
+    }
   }
 }
 
@@ -170,11 +179,15 @@
   display: flex;
   align-items: center;
 
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
 
   color: #757575;
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .checkbox__span {

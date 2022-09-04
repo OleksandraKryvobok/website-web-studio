@@ -1,15 +1,31 @@
 .filter {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
 }
 
 .portfolio__filter {
-  margin-bottom: 50px;
+  margin-bottom: 25px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 
 .filter__item {
-  &:not(:last-child) {
+  @media screen and (max-width: 767px) {
     margin-right: 8px;
+    margin-bottom: 15px;
+  }
+  @media screen and (min-width: 768px) {
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
   }
 }
 
@@ -42,24 +58,39 @@
   }
 }
 
-.projects {
-  display: flex;
-  flex-wrap: wrap;
+@media screen and (min-width: 768px) {
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .portfolio__projects {
-  margin-left: -30px;
-  margin-top: -30px;
+  @media screen and (min-width: 768px) {
+    margin: -15px;
+  }
 }
 
 .projects__item {
-  flex-basis: calc(100% / 3 - 30px);
-  margin-left: 30px;
-  margin-top: 30px;
+  width: 100%;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 2 - 30px);
+    margin: 15px;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 3 - 30px);
+  }
 }
 
 .projects__link {
   display: inline-block;
+
+  width: 100%;
 
   transition-property: box-shadow;
   transition-duration: 250ms;
@@ -78,6 +109,7 @@
 
 .overlay__img {
   display: block;
+  width: 100%;
 }
 
 .overlay__text {

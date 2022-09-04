@@ -1,19 +1,28 @@
 .operations {
   padding-top: 0;
+
+  @media screen and (max-width: 1199px) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+  }
 }
 
 .operations__list {
   display: flex;
+  margin: -15px;
 }
 
 .operations__item {
   position: relative;
 
   flex-basis: calc(100% / 3 - 30px);
-
-  &:not(:last-child) {
-    margin-right: 30px;
-  }
+  margin: 15px;
 }
 
 .operations__image {
